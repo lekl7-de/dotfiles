@@ -1,0 +1,9 @@
+[Nemo Action]
+Name=Aufnahmeort auf Karte zeigen
+Comment=GPS-Position des Fotos in Google Maps öffnen
+Icon-Name=mark-location
+# Nemo startet ohne Shell - bash -c löst $HOME auf. Benötigt install-scripts.sh
+Exec=bash -c '"$HOME/Scripts/photo_location.sh" --open "$0"' %F
+Quote=double
+Selection=s
+Mimetypes=image/*;video/*;
